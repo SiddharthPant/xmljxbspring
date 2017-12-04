@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlType;
 public class Headers {
 	String batchid;
 	String customerid;
-	String documentcount;
+	int documentcount;
 
 	public String getBatchid() {
 		return batchid;
@@ -29,12 +29,12 @@ public class Headers {
 		this.customerid = customerid;
 	}
 
-	public String getDocumentcount() {
+	public int getDocumentcount() {
 		return documentcount;
 	}
 
 	@XmlElement(name = "DocumentCount")
-	public void setDocumentcount(String documentcount) {
+	public void setDocumentcount(int documentcount) {
 		this.documentcount = documentcount;
 	}
 

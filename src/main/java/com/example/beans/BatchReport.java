@@ -1,41 +1,37 @@
 package com.example.beans;
 
-import java.util.Map;
+import java.util.List;
 
 public class BatchReport {
 	String dirname;
 	String batchid;
 	String customerid;
-	String documentCount;
-	Map<String, String> values;
+	int documentCount;
+	List<Doc> docs;
 
 	public BatchReport() {
 
 	}
 
-	public BatchReport(String dirname, String batchid, String customerid, String documentCount,
-			Map<String, String> values) {
+	public BatchReport(String dirname, String batchid, String customerid, int documentCount,
+			List<Doc> docs) {
 		this.dirname = dirname;
 		this.batchid = batchid;
 		this.customerid = customerid;
 		this.documentCount = documentCount;
-		this.values = values;
+		this.docs = docs;
 	}
 
 	public String getDirname() {
 		return dirname;
 	}
 
-	public Map<String, String> getValues() {
-		return values;
+	public List<Doc> getDocs() {
+		return docs;
 	}
 
-	public void setValues(Map<String, String> values) {
-		this.values = values;
-	}
-
-	public void addValues(String key, String value) {
-		this.values.put(key, value);
+	public void setDocs(List<Doc> docs) {
+		this.docs = docs;
 	}
 
 	public void setDirname(String dirname) {
@@ -58,18 +54,19 @@ public class BatchReport {
 		this.customerid = customerid;
 	}
 
-	public String getDocumentCount() {
+	public int getDocumentCount() {
 		return documentCount;
 	}
 
-	public void setDocumentCount(String documentCount) {
+	public void setDocumentCount(int documentCount) {
 		this.documentCount = documentCount;
 	}
 
 	@Override
 	public String toString() {
 		return "BatchReport [dirname=" + dirname + ", batchid=" + batchid + ", customerid=" + customerid
-				+ ", documentCount=" + documentCount + ", values=" + values + "]";
+				+ ", documentCount=" + documentCount + ", docs=" + docs + "]";
 	}
+
 
 }
